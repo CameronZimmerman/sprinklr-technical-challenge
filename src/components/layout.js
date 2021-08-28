@@ -1,8 +1,8 @@
-import React from 'react';
-import Header from './header.js';
-import Footer from './footer.js';
+import React from "react";
+import Header from "./header.js";
+import Footer from "./footer.js";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <div>
       <Header />
