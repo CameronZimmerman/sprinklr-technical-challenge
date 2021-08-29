@@ -1,0 +1,35 @@
+.header {
+  margin: 1rem 0 3rem 0
+}
+
+.title {
+  text-decoration: none;
+  color: black;
+  font-size: xx-large;
+}
+
+.title:hover {
+  color: rgb(70, 70, 70)
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: rgb(122, 122, 122);
+  margin-right: 0.5rem;
+}
+
+.nav-link:hover {
+  color: rgb(70, 70, 70);
+}
+
+.active-nav-link {
+  color: black
+}
