@@ -22,10 +22,14 @@
 .nav-link {
   font-size: 0.9rem;
   text-decoration: none;
-  color: black;
+  color: rgb(122, 122, 122);
   margin-right: 0.5rem;
 }
 
 .nav-link:hover {
-  color: gray;
+  color: rgb(70, 70, 70);
+}
+
+.active-nav-link {
+  color: black
 }

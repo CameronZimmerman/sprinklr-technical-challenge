@@ -9,16 +9,16 @@ const Header = () => {
       <nav>
         <ul className={headerStyles.navList}>
           <li>
-            <Link className={headerStyles.navLink} to="/">Home</Link>
+            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/">Home</Link>
           </li>
           <li>
-            <Link className={headerStyles.navLink} to="/blog">Blog</Link>
+            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/blog">Blog</Link>
           </li>
           <li>
-            <Link className={headerStyles.navLink} to="/about">About</Link>
+            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/about">About</Link>
           </li>
           <li>
-            <Link className={headerStyles.navLink} to="/contact">Contact</Link>
+            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
