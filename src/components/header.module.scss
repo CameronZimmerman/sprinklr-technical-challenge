@@ -1,11 +1,11 @@
 .header {
-  margin: 1rem;
-
+  margin: 1rem 0 3rem 0
 }
 
 .title {
   text-decoration: none;
   color: black;
+  font-size: xx-large;
 }
 
 .title:hover {
@@ -15,9 +15,12 @@
 .nav-list {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
+  font-size: 0.9rem;
   text-decoration: none;
   color: black;
   margin-right: 0.5rem;
