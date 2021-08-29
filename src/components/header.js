@@ -1,35 +1,53 @@
 import React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
-import * as headerStyles from './header.module.scss';
+import { Link } from "gatsby";
+import useMetadata from "../hooks/useSiteMetadata";
+import * as headerStyles from "./header.module.scss";
 
 const Header = () => {
-
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const { title } = useMetadata();
 
   return (
     <header className={headerStyles.header}>
-      <Link to="/" className={headerStyles.title}><h1>{data.site.siteMetadata.title}</h1></Link>
+      <Link to="/" className={headerStyles.title}>
+        <h1>{title}</h1>
+      </Link>
       <nav>
         <ul className={headerStyles.navList}>
           <li>
-            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/">Home</Link>
+            <Link
+              className={headerStyles.navLink}
+              activeClassName={headerStyles.activeNavLink}
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/blog">Blog</Link>
+            <Link
+              className={headerStyles.navLink}
+              activeClassName={headerStyles.activeNavLink}
+              to="/blog"
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/about">About</Link>
+            <Link
+              className={headerStyles.navLink}
+              activeClassName={headerStyles.activeNavLink}
+              to="/about"
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link className={headerStyles.navLink} activeClassName={headerStyles.activeNavLink} to="/contact">Contact</Link>
+            <Link
+              className={headerStyles.navLink}
+              activeClassName={headerStyles.activeNavLink}
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
