@@ -1,18 +1,18 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Cameron\'s Blog',
-    author: 'Cameron Zimmerman'
+    title: "Cameron's Blog",
+    author: "Cameron Zimmerman",
   },
   plugins: [
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
     },
-    'gatsby-transformer-remark'
+    "gatsby-transformer-remark",
   ],
 };

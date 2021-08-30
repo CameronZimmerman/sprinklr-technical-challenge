@@ -13,15 +13,13 @@ const BlogPage = () => {
       <h3>Recent Posts</h3>
       {/* Iterate over postTitlesDatesArray and create a li element for each one*/}
       <ol>
-        {
-          postTitlesDatesArray.map(({title, date}) => 
-            // unique key by concatenating title and date of post
-            <li key={`${title}${date}`}>
-              <h2>{title}</h2>
-              <p>{date}</p>
-            </li>
-            )
-        }
+        {postTitlesDatesArray.map(({ title, date }) => (
+          // unique key by concatenating title and date of post
+          <li key={`${title}${date}`}>
+            <h2>{title}</h2>
+            <p>{date}</p>
+          </li>
+        ))}
       </ol>
       <p>
         Interested in more of my content? Feel free to learn more{" "}

@@ -15,4 +15,4 @@ I'm excited for the chance to work at a company with real values.
 
 4. "Never, ever give up. Ever!" - Self explanatory. I'm excited to give my all in my new career with a great team.
 
-5. "Passionately, genuinely care." - In all my interviews and interactions with people in this industry, I have always lead with being a human centered developer. I firmly believe that with the right people you can do anything. 
+5. "Passionately, genuinely care." - In all my interviews and interactions with people in this industry, I have always lead with being a human centered developer. I firmly believe that with the right people you can do anything.

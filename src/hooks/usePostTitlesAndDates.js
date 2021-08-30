@@ -19,11 +19,11 @@ const usePostTitlesAndDates = () => {
     `
   );
   //grab the array of posts from the post query {allMarkdownRemark: { edges: [post1, post2, etc] }}
-  const postDataArray = fullMarkdownPostsQuery.allMarkdownRemark.edges
+  const postDataArray = fullMarkdownPostsQuery.allMarkdownRemark.edges;
   //map over array of posts and return only the title and date
   return postDataArray.map(post => ({
     title: post.node.frontmatter.title,
-    date: post.node.frontmatter.date
+    date: post.node.frontmatter.date,
   }));
 };
 
