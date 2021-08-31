@@ -14,7 +14,7 @@ export const postBySlug = graphql`
     ) {
       frontmatter {
         title
-        date
+        publishedDate(formatString: "YYYY-MM-DD")
       }
       html
     }	
