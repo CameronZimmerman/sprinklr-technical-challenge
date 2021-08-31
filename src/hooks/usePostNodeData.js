@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const usePostTitlesAndDates = () => {
+const usePostNodeData = () => {
   //static query to grab markdown files from the src directory
   const fullMarkdownPostsQuery = useStaticQuery(
     graphql`
@@ -11,6 +11,9 @@ const usePostTitlesAndDates = () => {
               frontmatter {
                 title
                 date
+              }
+              fields {
+                slug
               }
             }
           }
@@ -24,7 +27,8 @@ const usePostTitlesAndDates = () => {
   return postDataArray.map(post => ({
     title: post.node.frontmatter.title,
     date: post.node.frontmatter.date,
+    slug: post.node.fields.slug
   }));
 };
 
-export default usePostTitlesAndDates;
+export default usePostNodeData;
