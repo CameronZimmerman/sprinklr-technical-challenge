@@ -13,5 +13,6 @@ module.exports.onCreateNode = ({ node, actions }) => {
       name: "slug",
       value: slug,
     });
-  }
+  }; 
 };
+
