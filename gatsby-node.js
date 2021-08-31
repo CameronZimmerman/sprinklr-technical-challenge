@@ -23,6 +23,13 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   //query gatsby api to grab each of the slugs for our posts
   const { data, errors } = await graphql(`
     query {
+      allContentfulBlogPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
       allMarkdownRemark {
         edges {
           node {
@@ -39,6 +46,21 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   if(errors) {
     reporter.error('There was an issue querying markdown posts', new Error(errors))
   }
+  
+  // loop through each contentful post and create a page by slug
+  data.allContentfulBlogPost.edges.forEach(({ node }) => {
+    createPage({
+      //refers to the path of the component
+      component: blogTemplatePath,
+      //refers to the path of our page
+      path: `/blog/${node.slug}`,
+      context: {
+        slug: node.slug
+      }
+    })
+  });
+
+  // loop through each markdown post and create a page by slug
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       //refers to the path of the component
@@ -50,4 +72,5 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     })
   });
+
 };
