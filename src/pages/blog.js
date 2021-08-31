@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/layout.js";
 import { Link } from "gatsby";
-import usePostNodeData from "../hooks/usePostNodeData.js";
+import useAllPostsNodeData from "../hooks/useAllPostsNodeData.js";
 
 const BlogPage = () => {
   //grab an array of each md posts title and date
-  const postNodeDataArray = usePostNodeData();
+  const postNodeDataArray = useAllPostsNodeData();
 
   return (
     <Layout>
@@ -15,6 +15,7 @@ const BlogPage = () => {
       <ol>
         {postNodeDataArray.map(({ title, date, slug }) => (
           // unique key by concatenating title and date of post
+          // "slug" is the path to our specific page generated from each post
           <li key={`${title}${date}`}>
             <h2>
               <Link to={slug}>{title}</Link>

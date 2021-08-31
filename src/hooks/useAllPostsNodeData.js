@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const usePostNodeData = () => {
+const useAllPostsNodeData = () => {
   //static query to grab markdown files from the src directory
   const fullMarkdownPostsQuery = useStaticQuery(
     graphql`
@@ -31,4 +31,4 @@ const usePostNodeData = () => {
   }));
 };
 
-export default usePostNodeData;
+export default useAllPostsNodeData;
