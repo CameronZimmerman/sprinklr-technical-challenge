@@ -4,7 +4,7 @@ date: "2021-08-29"
 ---
 
 I'm excited for the chance to work at a company with real values.
-
+![Corevalues](./core-values.png)
 ## Taking the values to heart
 
 1. "It's OK. Be fearless" - Moving into a new career was scary. I've let that fear go, and look forward to growing as a developer.

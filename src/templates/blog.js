@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout.js';
 import { graphql } from 'gatsby';
 
-//using graphql in this manner grabs the slug variable from our context object in gatsby-node file
+//using graphql in this manner grabs the slug variable from our context object in the gatsby-node file
 export const postBySlug = graphql`
   query ($slug: String!) {
     markdownRemark (
