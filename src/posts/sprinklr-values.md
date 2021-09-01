@@ -1,6 +1,6 @@
 ---
 title: "Sprinklr's values"
-date: "2021-08-29"
+publishedDate: "2021-08-29"
 ---
 
 I'm excited for the chance to work at a company with real values.

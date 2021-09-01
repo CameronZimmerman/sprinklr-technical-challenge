@@ -5,6 +5,13 @@ module.exports = {
     author: "Cameron Zimmerman",
   },
   plugins: [
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
@@ -23,7 +30,7 @@ module.exports = {
             resolve: "gatsby-remark-images",
             options: {
               linkImagesToOriginal: false,
-              maxWidth: 2500
+              maxWidth: 750
             },
           },
         ],
