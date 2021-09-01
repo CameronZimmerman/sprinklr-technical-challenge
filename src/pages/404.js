@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "gatsby";
 import Layout from "../components/layout.js";
+import Head from "../components/head.js";
+import { Link } from "gatsby";
 
 const NotFound = () => {
   return (
     <Layout>
+      <Head pageTitle="Not found" />
       <h1>Page not found</h1>
       <img
         alt="confused Travolta"
