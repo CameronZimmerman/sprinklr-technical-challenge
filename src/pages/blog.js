@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout.js";
+import Head from "../components/head.js";
 import { Link } from "gatsby";
 import useAllPostsNodeData from "../hooks/useAllPostsNodeData.js";
 import * as blogStyles from './blog.module.scss';
@@ -10,6 +11,7 @@ const BlogPage = () => {
 
   return (
     <Layout>
+      <Head pageTitle={"Blog"} />
       <h1>Blog</h1>
       <h3>Recent Posts</h3>
       {/* Iterate over postNodeDataArray and create a li element for each one*/}

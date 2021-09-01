@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout.js";
+import Head from "../components/head.js";
 import { graphql } from "gatsby";
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
@@ -58,12 +59,14 @@ const Blog = ({ data }) => {
 
   return isContentfulPost? (
     <Layout>
+      <Head pageTitle={data.contentfulBlogPost.title}/>
       <h1>{data.contentfulBlogPost.title}</h1>
       <p>{data.contentfulBlogPost.publishedDate}</p>
       {renderRichText(data.contentfulBlogPost.body, options)}
     </Layout>
   ) : (
     <Layout>
+      <Head pageTitle={data.markdownRemark.frontmatter.title}/>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       <p>{data.markdownRemark.frontmatter.publishedDate}</p>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
