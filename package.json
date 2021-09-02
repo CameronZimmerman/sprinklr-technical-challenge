@@ -29,8 +29,13 @@
     "sass": "^1.38.2"
   },
   "devDependencies": {
+    "babel-jest": "^27.1.0",
+    "babel-preset-gatsby": "^1.13.0",
     "env-cmd": "^10.1.0",
-    "prettier": "2.3.2"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.1.0",
+    "prettier": "2.3.2",
+    "react-test-renderer": "^17.0.2"
   },
   "repository": {
     "type": "git",
