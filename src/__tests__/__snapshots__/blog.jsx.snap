@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Page renders blog post correctly 1`] = `
+<div>
+  <section>
+    <header>
+      <a
+        href="/"
+      >
+        <h1>
+          Test Title
+        </h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog"
+            >
+              Blog
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>
+      Blog
+    </h1>
+    <h3>
+      Recent Posts
+    </h3>
+    <ol>
+      <li>
+        <a
+          href="ContentfulTest2"
+        >
+          <h2>
+            Test 2 Contentful
+          </h2>
+          <p>
+            2021-09-02
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          href="ContentfulTest1"
+        >
+          <h2>
+            Test 1 Contentful
+          </h2>
+          <p>
+            2021-09-01
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          href="MarkdownTest1"
+        >
+          <h2>
+            Test 1 Markdown
+          </h2>
+          <p>
+            2021-09-01
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          href="MarkdownTest2"
+        >
+          <h2>
+            Test 2 Markdown
+          </h2>
+          <p>
+            2021-09-01
+          </p>
+        </a>
+      </li>
+    </ol>
+    <p>
+      Interested in more of my content? Feel free to learn more
+       
+      <a
+        href="/about"
+      >
+        about me.
+      </a>
+    </p>
+  </section>
+  <footer>
+    <p>
+      Created by 
+      Test Author
+      , © 2021
+    </p>
+  </footer>
+</div>
+`;
