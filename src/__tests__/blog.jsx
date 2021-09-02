@@ -3,9 +3,9 @@ import TestRenderer from "react-test-renderer";
 import BlogPage from "../pages/blog.js";
 
 describe("Blog Page", () => {
-  it("creates blog page correctly", () => {
+  it("renders blog post correctly", () => {
     const testRenderer = TestRenderer.create(<BlogPage />);
-    const blogTestInstance = testRenderer.root;
-    console.log(blogTestInstance);
+    const blogTestInstance = testRenderer.toJSON();
+    expect(blogTestInstance).toMatchSnapshot();
   });
 });

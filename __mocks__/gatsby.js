@@ -14,23 +14,6 @@ module.exports = {
           { fields: { slug: "MarkdownTest2" } },
         ],
       },
-      contentfulBlogPost: {
-        title: "Test 1 Contentful",
-        publishedDate: "2021-09-01",
-        body: {
-          raw: `{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Test Contentful Post!","marks":[],"data":{}}],"data":{}},{"nodeType":"heading-2","content":[{"nodeType":"text","value":"With Headings!","marks":[],"data":{}}],"data":{}},{"nodeType":"paragraph","content":[{"nodeType":"text","value":"","marks":[],"data":{}}],"data":{}},{"nodeType":"paragraph","content":[{"nodeType":"text","value":"i'm so excited. ","marks":[{"type":"italic"}],"data":{}}],"data":{}},{"nodeType":"paragraph","content":[{"nodeType":"text","value":"","marks":[],"data":{}}],"data":{}}]}`,
-        },
-      },
-      markdownRemark: {
-        fields: {
-          slug: "MarkdownTest1",
-        },
-        frontmatter: {
-          title: "Test 1 Markdown",
-          publishedDate: "2021-09-01",
-        },
-        html: "<p>Test</p>",
-      },
     },
   })),
   useStaticQuery: jest.fn().mockImplementation(() => ({

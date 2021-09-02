@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Page renders blog post correctly 1`] = `
+<div>
+  <section>
+    <header>
+      <a
+        href="/"
+      >
+        <h1>
+          Test Title
+        </h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog"
+            >
+              Blog
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>
+      Test 1 Contentful
+    </h1>
+    <p>
+      2021-09-01
+    </p>
+    <p>
+      Test Contentful Post!
+    </p>
+    <h2>
+      With Headings!
+    </h2>
+    <p>
+      
+    </p>
+    <p>
+      <i>
+        i'm so excited. 
+      </i>
+    </p>
+    <p>
+      
+    </p>
+  </section>
+  <footer>
+    <p>
+      Created by 
+      Test Author
+      , © 2021
+    </p>
+  </footer>
+</div>
+`;
