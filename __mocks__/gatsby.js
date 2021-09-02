@@ -5,12 +5,6 @@ module.exports = {
   ...gatsby,
   graphql: jest.fn().mockImplementation(() => ({
     data: {
-      site: {
-        siteMetaData: {
-          title: "Test Title",
-          author: "Test Author",
-        },
-      },
       allContentfulBlogPost: {
         edges: [{ slug: "ContentfulTest1" }, { slug: "ContentfulTest2" }],
       },
@@ -29,69 +23,85 @@ module.exports = {
       },
       markdownRemark: {
         fields: {
-          slug: "MarkdownTest1"
+          slug: "MarkdownTest1",
         },
         frontmatter: {
           title: "Test 1 Markdown",
-          publishedDate: "2021-09-01"
+          publishedDate: "2021-09-01",
         },
-        html: "<p>Test</p>"
-      }
+        html: "<p>Test</p>",
+      },
     },
   })),
   useStaticQuery: jest.fn().mockImplementation(() => ({
+    site: {
+      siteMetadata: {
+        title: "Test Title",
+        author: "Test Author",
+      },
+    },
     allContentfulBlogPost: {
       edges: [
         {
-          title: "Test 1 Contentful",
-          slug: "ContentfulTest1",
-          publishedDate: "2021-09-01",
+          node: {
+            title: "Test 1 Contentful",
+            slug: "ContentfulTest1",
+            publishedDate: "2021-09-01",
+          },
         },
         {
-          title: "Test 2 Contentful",
-          slug: "ContentfulTest2",
-          publishedDate: "2021-09-02",
+          node: {
+            title: "Test 2 Contentful",
+            slug: "ContentfulTest2",
+            publishedDate: "2021-09-02",
+          },
         },
       ],
     },
     allMarkdownRemark: {
       edges: [
         {
-          frontmatter: {
-            title: "Test 1 Markdown",
-            publishedDate: "2021-09-01",
+          node: {
+            frontmatter: {
+              title: "Test 1 Markdown",
+              publishedDate: "2021-09-01",
+            },
+            fields: {
+              slug: "MarkdownTest1",
+            },
           },
-          fields: {
-            slug: "MarkdownTest1"
-          }
         },
         {
-          frontmatter: {
-            title: "Test 2 Markdown",
-            publishedDate: "2021-09-01",
+          node: {
+            frontmatter: {
+              title: "Test 2 Markdown",
+              publishedDate: "2021-09-01",
+            },
+            fields: {
+              slug: "MarkdownTest2",
+            },
           },
-          fields: {
-            slug: "MarkdownTest2"
-          }
         },
       ],
     },
   })),
-  Link: jest.fn().mockImplementation(
-    ({
-      activeClassName,
-      activeStyle,
-      getProps,
-      innerRef,
-      partiallyActive,
-      ref,
-      replace,
-      to,
-      ...rest
-    }) =>
-      React.createElement("a", {
-        ...rest,
-        href: to,
-      })
-  ),
+  Link: jest
+    .fn()
+    .mockImplementation(
+      ({
+        activeClassName,
+        activeStyle,
+        getProps,
+        innerRef,
+        partiallyActive,
+        ref,
+        replace,
+        to,
+        ...rest
+      }) =>
+        React.createElement("a", {
+          ...rest,
+          href: to,
+        })
+    ),
 };
